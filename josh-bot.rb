@@ -104,11 +104,10 @@ class JoshTheBot
   end
 
   def get_color(color)
-    color.length > 1 ? @colors["multi"] : @colors[color]
+    color.length > 1 ? @colors["multi"] : @colors[color[0]]
   end
 
   def get_title(name, mana_cost)
-    emoji_array = Manamoji.get_emoji(mana_cost)
-    name + " " + emoji_array.map! {|e| @bot.find_emoji(e).to_s}.join(" ")
+    name + " " + Manamoji.get_emoji(mana_cost).map! {|e| @bot.find_emoji(e).to_s}.join(" ")
   end
 end

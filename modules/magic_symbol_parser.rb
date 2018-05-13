@@ -9,7 +9,7 @@ module Manamoji
   # discord bot. Theirs was in javascript, so I had to do a bit of translation,
   # but it follows the same basic principles as their Manamoji.
   COLORS = ["W", "U", "B", "R", "G"]
-  NUMBERS = [0..16, 20]
+  NUMBERS = (0..16).to_a + [20]
   ETC = ["C", "E", 'T', 'Q', 'S', "X"]
 
   @@substitutions = {}
@@ -17,7 +17,6 @@ module Manamoji
   def Manamoji.build(before, after = nil)
     @@substitutions["#{before}"] = "mana#{(after.nil? ? before : after).to_s.downcase}"
   end
-  
 
   ETC.each do |sym|
     Manamoji.build(sym)
@@ -32,7 +31,7 @@ module Manamoji
   end
 
   COLORS.each do |sym|
-    Manamoji.build("2/#{sym}")
+    Manamoji.build("2/#{sym}", "2#{sym}")
   end
 
   COLORS.each do |sym|
