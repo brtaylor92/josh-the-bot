@@ -1,7 +1,7 @@
 # Installation
 The easiest method is to clone this codebase using github.
 
-Then, inside of the main directory create a `config.yaml` file, and add the text `DISCORD_TOKEN: <your-token-here>`. If you don't know how to get a discord token, you can go [here] (https://discordapp.com/developers/applications/me), create an app, make a bot account for it, and use the token generated for that bot.
+Then, inside of the main directory create a `config.yaml` file, and add the text `DISCORD_TOKEN: <your-token-here>`. If you don't know how to get a discord token, you can go [here](https://discordapp.com/developers/applications/me), create an app, make a bot account for it, and use the token generated for that bot.
 
 Make sure you `bundle` in your terminal inside of the directory for your bot before you, again in your terminal, use `ruby run.rb` to start the bot up. (Make sure to invite it to your server!)
 
